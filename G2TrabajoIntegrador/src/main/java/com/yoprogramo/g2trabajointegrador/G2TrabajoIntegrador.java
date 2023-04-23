@@ -21,7 +21,7 @@ public class G2TrabajoIntegrador {
        
        Partido Final = new Partido("Final", Argentina, Francia, 5, 4);
        
-       Pronostico Prueba = new Pronostico(Final, Francia, ResultadoEnum.ganador); 
+       Pronostico Prueba = new Pronostico(Final, Argentina, ResultadoEnum.ganador); 
        
        Persona Franco = new Persona("Franco","Cuello",Prueba,0);
        
@@ -44,6 +44,8 @@ public class G2TrabajoIntegrador {
        System.out.println(Rondafinal);
        
        System.out.println(Franco.sumarPuntos(Prueba));
+       
+       Franco.puntajeTotal();
        
              
          

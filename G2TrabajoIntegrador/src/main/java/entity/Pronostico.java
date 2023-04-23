@@ -59,20 +59,14 @@ public class Pronostico {
     
     public int puntos(Pronostico resultadoPro, Partido resultadoPar){
         
-        if(resultadoPro.equipo.equals(resultadoPar.getEquipo1())){
-            if(resultadoPro.resultadoPro.equals(resultadoPar.resultado(resultadoPar.getEquipo1()))){
-            resultadoPro.puntosJugador = resultadoPro.puntosJugador +1 ; 
+        if(resultadoPro.equipo.equals(resultadoPar.getEquipo1())&&
+           resultadoPro.resultadoPro.equals(resultadoPar.resultado(resultadoPar.getEquipo1())) || 
+           resultadoPro.equipo.equals(resultadoPar.getEquipo2()) &&
+           resultadoPro.resultadoPro.equals(resultadoPar.resultado(resultadoPar.getEquipo2()))){
+           resultadoPro.puntosJugador = resultadoPro.puntosJugador +1 ; 
             System.out.println("Se suma un total de " + puntosJugador);
               }
-        }if(!resultadoPro.equipo.equals(resultadoPar.getEquipo1())) {
-            System.out.println("No suma puntos");
-        }
-        if(resultadoPro.equipo.equals(resultadoPar.getEquipo2())){
-            if(resultadoPro.resultadoPro.equals(resultadoPar.resultado(resultadoPar.getEquipo2()))){
-            resultadoPro.puntosJugador = resultadoPro.puntosJugador +1 ; 
-            System.out.println("Se suma un total de " + puntosJugador);
-              }
-        }if(!resultadoPro.equipo.equals(resultadoPar.getEquipo2())) {
+        else{
             System.out.println("No suma puntos");
         }
         

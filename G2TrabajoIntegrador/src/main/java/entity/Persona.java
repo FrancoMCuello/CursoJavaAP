@@ -68,6 +68,11 @@ public class Persona {
        
     }
     
+    public void puntajeTotal(){
+        System.out.println(puntaje);
+    
+    }
+    
     
     
 }
