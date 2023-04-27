@@ -72,8 +72,10 @@ public class Partido {
 
     @Override
     public String toString() {
-        return "Partido{" + "nombre=" + nombrePar + '}';
+        return "Partido{" + "nombrePar=" + nombrePar + ", equipo1=" + equipo1 + ", equipo2=" + equipo2 + ", golesEquipo1=" + golesEquipo1 + ", golesEquipo2=" + golesEquipo2 + '}';
     }
+
+   
     
     
     
@@ -81,7 +83,7 @@ public class Partido {
     
     public void resultadoPartido(){
            if(getGolesEquipo1()>getGolesEquipo2()){
-            getEquipo1().setDescripcion(ResultadoEnum.ganador); 
+            getEquipo1().setDescripcion(ResultadoEnum.ganador);
             getEquipo2().setDescripcion(ResultadoEnum.perdedor);
         } if (getGolesEquipo1()<getGolesEquipo2()){
             getEquipo1().setDescripcion(ResultadoEnum.perdedor);

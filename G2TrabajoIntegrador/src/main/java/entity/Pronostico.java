@@ -9,7 +9,7 @@ public class Pronostico {
     private Partido partido;
     private Equipo equipo;
     private ResultadoEnum resultadoPro;
-    private int puntosJugador = 0;
+    private int puntosJugador;
     
  
 //Constructores
@@ -21,6 +21,8 @@ public class Pronostico {
         this.equipo = equipo;
         this.resultadoPro = resultadoPro;
     }
+
+  
 
 
 //Getters && Setters
@@ -48,6 +50,24 @@ public class Pronostico {
     public void setResultado(ResultadoEnum resultadoPro) {
         this.resultadoPro = resultadoPro;
     }
+
+    public ResultadoEnum getResultadoPro() {
+        return resultadoPro;
+    }
+
+    public void setResultadoPro(ResultadoEnum resultadoPro) {
+        this.resultadoPro = resultadoPro;
+    }
+
+    public int getPuntosJugador() {
+        return puntosJugador;
+    }
+
+    public void setPuntosJugador(int puntosJugador) {
+        this.puntosJugador = puntosJugador;
+    }
+    
+    
 
     @Override
     public String toString() {

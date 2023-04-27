@@ -1,21 +1,21 @@
-
 package entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Persona {
-    
+
     private String nombre;
     private String apellido;
-    private Pronostico pronoticoDePersona;
-    private int puntaje; 
+    public List<Pronostico> pronosticoDePersona = new ArrayList<>();
+    private int puntaje;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, Pronostico pronoticoDePersona, int puntaje) {
+    public Persona(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.pronoticoDePersona = pronoticoDePersona;
-        this.puntaje= puntaje;
     }
 
     public String getNombre() {
@@ -34,12 +34,12 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public Pronostico getPronoticoDePersona() {
-        return pronoticoDePersona;
+    public List<Pronostico> getPronosticoDePersona() {
+        return pronosticoDePersona;
     }
 
-    public void setPronoticoDePersona(Pronostico pronoticoDePersona) {
-        this.pronoticoDePersona = pronoticoDePersona;
+    public void setPronosticoDePersona(List<Pronostico> pronosticoDePersona) {
+        this.pronosticoDePersona = pronosticoDePersona;
     }
 
     public int getPuntaje() {
@@ -53,26 +53,23 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", puntaje=" + puntaje + '}';
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", pronosticoDePersona=" + pronosticoDePersona + ", puntaje=" + puntaje + '}';
     }
-    
-    
-    
+
     //Metodos
-    
-    public int sumarPuntos(Pronostico puntos){
-       
-        System.out.println("El puntaje total de " + nombre + " es igual a " + puntaje );
-       
-       return puntaje + puntos.puntos(puntos, puntos.getPartido());
-       
+    public void agregarPronostico(Pronostico pronostico, Partido partido) {
+
+        pronosticoDePersona.add(pronostico);
+
+        pronostico.puntos(pronostico, partido);
+
+        puntaje = puntaje + pronostico.getPuntosJugador();
+
     }
-    
-    public void puntajeTotal(){
+
+    public void puntajeTotal() {
         System.out.println(puntaje);
-    
+
     }
-    
-    
-    
+
 }

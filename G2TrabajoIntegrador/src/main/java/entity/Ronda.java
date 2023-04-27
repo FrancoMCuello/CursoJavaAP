@@ -16,6 +16,10 @@ public class Ronda {
     public Ronda(String nro) {
         this.nro = nro;
     }
+
+    public Ronda() {
+    }
+    
     
     //Getters and Setters
 
@@ -37,9 +41,11 @@ public class Ronda {
    
    //Metodos
     
-    public void agregarPartidos(Partido partidos){
+    public void agregarPartidos(Partido partido){
        
-        partidosJugados.add(partidos);
+        partidosJugados.add(partido);
+        
+        partido.resultadoPartido();
     
     }
     
