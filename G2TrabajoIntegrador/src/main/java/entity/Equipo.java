@@ -36,7 +36,7 @@ public class Equipo {
 
     @Override
     public String toString() {
-        return "Equipo{" + "nombre=" + nombre + '}';
+        return nombre;
     }
     
     

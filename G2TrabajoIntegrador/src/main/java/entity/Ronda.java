@@ -53,7 +53,7 @@ public class Ronda {
 
     @Override
     public String toString() {
-        return "Ronda{" + "nro=" + nro + ", partidosJugados=" + partidosJugados + '}';
+        return "Ronda " + nro + ", partidosJugados=" + partidosJugados;
     }
     
     
