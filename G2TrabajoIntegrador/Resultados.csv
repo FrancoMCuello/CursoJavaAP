@@ -1,1 +1,4 @@
-Primer Ronda,[Partido Final, equipo1= Argentina, equipo2= Francia, golesEquipo1= 5, golesEquipo2= 4, Partido Semi, equipo1= Peru, equipo2= España, golesEquipo1= 3, golesEquipo2= 4],
+Nro Ronda,Nombre Partido,Equipo 1,Equipo 2,Goles Equipo 1,Goles Equipo 2,
+Primer Ronda,[Partido Final, equipo1= Argentina, golesEquipo1= 5, equipo2= Francia, golesEquipo2= 4
+, Partido Semi, equipo1= Peru, golesEquipo1= 3, equipo2= España, golesEquipo2= 4
+],

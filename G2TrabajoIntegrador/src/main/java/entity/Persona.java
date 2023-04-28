@@ -53,7 +53,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona" + nombre + ", " + apellido + ", pronosticoDePersona=" + pronosticoDePersona + ", puntaje=" + puntaje;
+        return "Persona " + nombre + ", " + apellido + ", pronosticoDePersona=" + pronosticoDePersona + ", puntaje=" + puntaje +"\n";
     }
 
     //Metodos

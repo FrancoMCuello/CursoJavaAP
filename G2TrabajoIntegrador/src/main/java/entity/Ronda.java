@@ -9,6 +9,7 @@ public class Ronda {
     
    private String nro;
    public List<Partido> partidosJugados = new ArrayList<>();
+   public List<Persona> pronosticosDeronda = new ArrayList<>();
    
    
     //Constructor 
@@ -38,6 +39,16 @@ public class Ronda {
     public void setPartidos(List<Partido> partidos) {
         this.partidosJugados = partidos;
     }
+
+    public List<Persona> getPronosticosDeronda() {
+        return pronosticosDeronda;
+    }
+
+    public void setPronosticosDeronda(List<Persona> pronosticosDeronda) {
+        this.pronosticosDeronda = pronosticosDeronda;
+    }
+    
+    
    
    //Metodos
     

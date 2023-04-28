@@ -10,16 +10,18 @@ public class Pronostico {
     private Equipo equipo;
     private ResultadoEnum resultadoPro;
     private int puntosJugador;
+    private Persona persona;
     
  
 //Constructores
     public Pronostico() {
     }
 
-    public Pronostico(Partido partido, Equipo equipo, ResultadoEnum resultadoPro) {
+    public Pronostico(Persona persona, Partido partido, Equipo equipo, ResultadoEnum resultadoPro) {
         this.partido = partido;
         this.equipo = equipo;
         this.resultadoPro = resultadoPro;
+        this.persona = persona; 
     }
 
   
@@ -71,7 +73,7 @@ public class Pronostico {
 
     @Override
     public String toString() {
-        return "Pronostico{" + "partido=" + partido + ", equipo=" + equipo + ", resultado=" + resultadoPro + ", puntosJugador=" + puntosJugador + '}';
+        return "Pronostico de " + persona + "partido= " + partido + ", equipo=" + equipo + ", resultado=" + resultadoPro + ", puntosJugador=" + puntosJugador;
     }
 
    
