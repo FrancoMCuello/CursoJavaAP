@@ -34,13 +34,15 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public List<Pronostico> getPronosticoDePersona() {
+    public List<Pronostico> getPronostico() {
         return pronosticoDePersona;
     }
 
-    public void setPronosticoDePersona(List<Pronostico> pronosticoDePersona) {
-        this.pronosticoDePersona = pronosticoDePersona;
+    public void setPronostico(List<Pronostico> pronostico) {
+        this.pronosticoDePersona = pronostico;
     }
+
+    
 
     public int getPuntaje() {
         return puntaje;
@@ -53,7 +55,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona " + nombre + ", " + apellido + ", pronosticoDePersona=" + pronosticoDePersona + ", puntaje=" + puntaje +"\n";
+        return "Persona " + nombre + ", " + apellido + ", pronostico=" + pronosticoDePersona + ", puntaje=" + puntaje +"\n";
     }
 
     //Metodos

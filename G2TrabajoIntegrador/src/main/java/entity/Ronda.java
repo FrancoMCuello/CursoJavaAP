@@ -9,7 +9,7 @@ public class Ronda {
     
    private String nro;
    public List<Partido> partidosJugados = new ArrayList<>();
-   public List<Persona> pronosticosDeronda = new ArrayList<>();
+   public List<Persona> pronosticosDeRonda = new ArrayList<>();
    
    
     //Constructor 
@@ -41,11 +41,11 @@ public class Ronda {
     }
 
     public List<Persona> getPronosticosDeronda() {
-        return pronosticosDeronda;
+        return pronosticosDeRonda;
     }
 
     public void setPronosticosDeronda(List<Persona> pronosticosDeronda) {
-        this.pronosticosDeronda = pronosticosDeronda;
+        this.pronosticosDeRonda = pronosticosDeronda;
     }
     
     
@@ -58,6 +58,18 @@ public class Ronda {
         
         partido.resultadoPartido();
     
+    }
+    
+    public void agregarPronosticosDeRonda(Ronda ronda, Persona pronostico){
+    
+        pronosticosDeRonda.add(pronostico);
+        
+        for(int i =0; i<pronosticosDeRonda.size(); i++){
+            if(pronosticosDeRonda.get(i).getNombre() == pronostico.getNombre()){
+            System.out.println(pronostico.getNombre() + pronostico.getPronostico());
+          }
+        }
+        
     }
     
     //ToString

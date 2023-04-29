@@ -6,7 +6,6 @@ import entity.Persona;
 import entity.Pronostico;
 import entity.ResultadoEnum;
 import entity.Ronda;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,19 +30,22 @@ public class G2TrabajoIntegrador {
         Persona franco = new Persona("Franco", "Cuello");
         Persona alan = new Persona ("Alan", "Perez");
 
-        Pronostico pfranco1 = new Pronostico(franco, finalp, argentina, ResultadoEnum.ganador);
-        Pronostico pfranco2 = new Pronostico(franco, semi, españa, ResultadoEnum.ganador);
-        Pronostico pAlan1 = new Pronostico (alan, finalp, francia, ResultadoEnum.perdedor);
-        Pronostico pAlan2 = new Pronostico (alan, semi, españa, ResultadoEnum.ganador);
+        Pronostico pfranco1 = new Pronostico(finalp, argentina, ResultadoEnum.ganador);
+        Pronostico pfranco2 = new Pronostico(semi, españa, ResultadoEnum.ganador);
+        Pronostico pAlan1 = new Pronostico (finalp, francia, ResultadoEnum.perdedor);
+        Pronostico pAlan2 = new Pronostico (semi, españa, ResultadoEnum.ganador);
 
-        /*franco.agregarPronostico(pfranco1, finalp);
+        franco.agregarPronostico(pfranco1, finalp);
         franco.agregarPronostico(pfranco2, semi);
         alan.agregarPronostico(pAlan2, semi);
-        alan.agregarPronostico(pAlan1, finalp);*/
+        alan.agregarPronostico(pAlan1, finalp);
 
         System.out.println(primerRonda);
+        
+        primerRonda.agregarPronosticosDeRonda(primerRonda, franco);
+        primerRonda.agregarPronosticosDeRonda(primerRonda, alan);
 
-        System.out.println(franco);
+        //System.out.println(franco);
 
         
         
@@ -79,10 +81,11 @@ public class G2TrabajoIntegrador {
                e.printStackTrace();
            }
            
-           String filePath = "/Resultados.csv";
+           
+           /*String filePath = "/Resultados.csv";
            File file = new File(filePath);
            String path = file.getPath();
-           System.out.println(path);
+           System.out.println(path);*/
            
 
     }
